@@ -1,0 +1,11 @@
+- hosts: all
+  become: true
+
+  roles:
+    - FrogyYen.centos7-nginx
+    - FrogyYen.centos7-php7
+    - FrogyYen.centos7-mariadb
+    - FrogyYen.centos7-wordpress
+    - FrogyYen.centos7-initwordpress
+
+

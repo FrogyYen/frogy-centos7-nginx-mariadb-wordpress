@@ -1,0 +1,20 @@
+-
+  src: FrogyYen.centos7-nginx
+  path: roles/
+
+-
+  src: FrogyYen.centos7-php7
+  path: roles/
+
+-
+  src: FrogyYen.centos7-mariadb
+  path: roles/
+
+-
+  src: FrogyYen.centos7-wordpress
+  path: roles/
+
+-
+  src: FrogyYen.centos7-initwordpress
+  path: roles/
+

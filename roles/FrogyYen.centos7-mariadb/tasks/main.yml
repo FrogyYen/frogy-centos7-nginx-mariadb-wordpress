@@ -1,0 +1,13 @@
+- name: Install mariadb
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - mariadb-server
+    - mariadb
+
+- name: Ensure service is started and that it always starts on boot
+  service: name=mariadb state=started enabled=yes
+
+
+

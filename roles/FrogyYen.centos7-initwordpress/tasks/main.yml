@@ -1,0 +1,15 @@
+- debug: msg="==> 12 - automate the '5-minute install' process"
+
+- name: RedHat/CentOS - Install pip
+  command: bash -c "curl https://bootstrap.pypa.io/get-pip.py | python -"
+
+- name: Install httplib2
+  pip: name=httplib2
+
+- name: send POST to WordPress install wizard
+  uri:
+    url: "{{ wordpress_install_url }}"
+    method: POST
+    HEADER_Content-Type: "application/x-www-form-urlencoded"
+    body: "weblog_title={{ blog_title }}&user_name={{ blog_user }}&admin_email={{ blog_email }}&blog_public=true&admin_password={{ blog_password }}&admin_password2={{ blog_password }}"
+    status_code: 200

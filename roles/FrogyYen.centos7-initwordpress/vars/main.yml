@@ -1,0 +1,7 @@
+---
+hostname: mywordpress
+wordpress_install_url: "http://{{ hostname }}/wp-admin/install.php?step=2"
+blog_title: ANSIBLE_TEST
+blog_user: admin
+blog_password: admin
+blog_email: foo@gmail.com
